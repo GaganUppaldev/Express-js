@@ -4,10 +4,12 @@
 //const express = require('express');
 
 import express from 'express'; 
+const app = express();// i forgot to create variable for express
 const port = 4000
 
 app.get('/', (req, res) => {  
-  res.send('Hello World!')
+  res.send('hey how are you buddy')
+  
 }) 
 
 app.get('/home',(req,res) => {       //when you add /home to local host url like this http://localhost:4000/contact you will see This is home section means got routed to home page
@@ -27,3 +29,4 @@ app.get('/contact',(req,res) => {    // same as above just value changed
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`) //defining port
 }) 
+
