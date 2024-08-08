@@ -33,6 +33,34 @@ app.listen(port, () => {
   console.log(`Example app listening on port ${port}`) 
 }) 
 
+//below is basic.html that i served and it is in comments
+/*
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+</head>
+<body>
+    <div>
+        <h1>Signup Form</h1>
+        <form action="/submit-signup" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+</body>
+</html>
+
+*/
+
+
 
 
 
