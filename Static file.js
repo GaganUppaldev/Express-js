@@ -60,6 +60,62 @@ app.listen(port, () => {
 
 */
 
+//======================================================================================================================================
+//ABSOLUTE PATH OF DIRECTORY METHOD 
+//This way is better more considered while devlopment
+
+/*
+import express from 'express';
+import path from 'path';
+
+//I got error when i was not using file from public folder but we can solveit by defining dirname manually 
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+
+const app = express();
+const port = 4000;
+
+// Define __dirname for ES modules
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+// Routes
+app.get('/', (req, res) => {  
+  res.send('Hey, how are you buddy?');
+});
+
+app.get('/home', (req, res) => {
+  res.send('This is the home section');
+});
+
+app.get('/about', (req, res) => {
+  res.send('This is the about section');
+});
+
+app.get('/contact', (req, res) => {
+  res.send('This is the contact section');
+});
+
+// Serve static files from the 'public' directory
+app.use('/static', express.static('public'));
+
+// Serve a specific HTML file from other folder than public
+app.get('/open', (req, res) => {
+  res.sendFile(path.join(__dirname, 'views', 'xyz.html'));//This method is concidered good practise and it reduce runtime errors
+});
+
+
+app.listen(port, () => {
+  console.log(`Example app listening on port ${port}`);
+});
+
+
+
+
+
+
+*/
+
 
 
 
